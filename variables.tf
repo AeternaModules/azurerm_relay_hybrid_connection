@@ -14,7 +14,7 @@ EOT
     name                          = string
     relay_namespace_name          = string
     resource_group_name           = string
-    requires_client_authorization = optional(bool, true)
+    requires_client_authorization = optional(bool) # Default: true
     user_metadata                 = optional(string)
   }))
 }
