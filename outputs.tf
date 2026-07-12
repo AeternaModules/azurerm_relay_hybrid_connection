@@ -1,3 +1,7 @@
+output "relay_hybrid_connections_id" {
+  description = "Map of id values across all relay_hybrid_connections, keyed the same as var.relay_hybrid_connections"
+  value       = { for k, v in azurerm_relay_hybrid_connection.relay_hybrid_connections : k => v.id }
+}
 output "relay_hybrid_connections_name" {
   description = "Map of name values across all relay_hybrid_connections, keyed the same as var.relay_hybrid_connections"
   value       = { for k, v in azurerm_relay_hybrid_connection.relay_hybrid_connections : k => v.name }
